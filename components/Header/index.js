@@ -4,10 +4,16 @@ import styled from 'styled-components';
 const Header = () => {
   return (
     <HeaderContainer>
-      <Video controls muted autoplay loop >
-        <source src='./video.mp4' type='video/mp4' />
+      <Video
+        controlsList='nodownload nofullscreen noremoteplayback'
+        controls
+        autoPlay
+        loop
+        playsInline
+        disablePictureInPicture
+        preload='auto' >
+        <source src='https://res.cloudinary.com/scall/video/upload/v1619971036/sCallProfiles/Jose%20Rosha/jrosha_cover_qogazg.mp4' type='video/mp4' />
       </Video>
-      <h1>Coming Soon</h1>
     </HeaderContainer>
   );
 };
@@ -16,18 +22,17 @@ export default Header;
 
 
 const HeaderContainer = styled.header`
-min-height: 100vh;
-position: relative;
-display: grid;
-place-items: center;
+position: sticky;
+	top: 0;
+	width: 100%;
 `;
 
 const Video = styled.video`
-position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -2;
+position: fixed;
+right: 0;
+bottom: 0;
+min-width: 100%;
+min-height: 100%;
+object-fit: cover;
+
 `;

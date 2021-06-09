@@ -148,7 +148,7 @@ p {
   font-size: 0.875rem;
   border: 2px solid var(--clr-black);
   cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); */
   border-radius: var(--radius);
 }
 .btn:hover {
@@ -181,7 +181,10 @@ Video
 ===============
 */
 
-
+.hide-preloader {
+  z-index: -999;
+  visibility: hidden;
+}
 
 header {
   min-height: 100vh;
@@ -204,15 +207,3 @@ h1 {
 /* switch button */
 
 
-
-/* header after */
-header::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: -1;
-}
