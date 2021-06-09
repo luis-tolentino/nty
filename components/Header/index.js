@@ -22,17 +22,21 @@ export default Header;
 
 
 const HeaderContainer = styled.header`
-position: sticky;
-	top: 0;
-	width: 100%;
+position: absolute;
+width: 100%;
+height: 100vh;
+overflow: hidden;
 `;
 
 const Video = styled.video`
-position: fixed;
-right: 0;
-bottom: 0;
-min-width: 100%;
-min-height: 100%;
 object-fit: cover;
-
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+}
+@media only screen and (max-width: 425px){
+max-height:242px;
+}
 `;
